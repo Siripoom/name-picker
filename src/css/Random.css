@@ -1,0 +1,55 @@
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+  
+  .wheel-segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    text-align: right;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wheel-segment span {
+    transform: rotate(-45deg);
+  }
+  
+  .spin-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .spin-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
