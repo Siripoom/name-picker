@@ -1,55 +1,52 @@
-.wheel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .wheel {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid #000;
-    overflow: hidden;
-    transform-origin: center;
-    transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-  
-  .wheel-segment {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 50%;
-    left: 50%;
-    transform-origin: 0 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    text-align: right;
-    font-size: 14px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .wheel-segment span {
-    transform: rotate(-45deg);
-  }
-  
-  .spin-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .spin-button:disabled {
-    background-color: gray;
-    cursor: not-allowed;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  background-color: hsl(202, 72%, 90%);
+  min-height: 100vh;
+}
+#root{
+  min-height: 100vh;
+}
+.navbar{
+  padding: 20px 0px 20px 0px;
+  color: #ffff;
+  background-color: #0A3981;
+  border-radius: 0px 0px 10px 10px ;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.footer {
+  background-color: #3b3b3b; /* สีพื้นหลังของ footer */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.grass {
+  position: absolute;
+  top: -20px; /* ปรับเพื่อให้ SVG อยู่ที่ขอบบน */
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.grass svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 30px;
+}
+
+
